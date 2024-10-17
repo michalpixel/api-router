@@ -28,6 +28,9 @@ abstract class ApiRouteSpec
 	/** @var array<mixed>|null */
 	protected ?array $example = null;
 
+    /** @var array<mixed>|null */
+    protected ?array $data = null;
+
 	protected ?string $section = null;
 
 	/** @var array<mixed> */
@@ -120,6 +123,22 @@ abstract class ApiRouteSpec
 	{
 		return $this->example;
 	}
+
+    /**
+     * @param array<mixed>|null $data
+     */
+    public function setData(?array $data): void
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * @return array<mixed>|null
+     */
+    public function getData(): ?array
+    {
+        return $this->data;
+    }
 
 	public function setSection(?string $section): void
 	{
