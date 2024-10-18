@@ -31,6 +31,8 @@ abstract class ApiRouteSpec
     /** @var array<mixed>|null */
     protected ?array $data = null;
 
+	protected ?string $comment = null;
+
 	protected ?string $section = null;
 
 	/** @var array<mixed> */
@@ -139,6 +141,16 @@ abstract class ApiRouteSpec
     {
         return $this->data;
     }
+
+	public function setComment(?string $comment): void
+	{
+		$this->comment = $comment;
+	}
+
+	public function getComment(): ?string
+	{
+		return $this->comment;
+	}
 
 	public function setSection(?string $section): void
 	{
